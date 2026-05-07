@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="EMLYS Restaurant à 1200 Logements, Ouagadougou. Saveurs locales, terrasse, vente à emporter, repas sur place, réservations, menu, galerie et localisation."
+    />
+    <title>EMLYS Restaurant | Une expérience gourmande à Ouagadougou</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <nav class="nav" aria-label="Navigation principale">
+        <a class="brand" href="#home" aria-label="Accueil EMLYS Restaurant">
+          <span class="brand-mark">
+            <img src="logo emlys resto_page-0001.jpg" alt="EMLYS Restaurant logo" />
+          </span>
+          <span class="brand-text">EMLYS</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Ouvrir la navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links" id="navLinks">
+          <a href="#about">À propos</a>
+          <a href="#menu">Menu</a>
+          <a href="#reviews">Avis</a>
+          <a href="#services">Services</a>
+          <a href="#infos">Infos</a>
+          <a href="#gallery">Galerie</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <a class="nav-reserve" href="#reservation">Réserver</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home" aria-label="Accueil EMLYS Restaurant">
+        <div class="hero-media" role="img" aria-label="Table élégante avec plats servis"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal">
+          <p class="eyebrow">1200 Logements, Ouagadougou</p>
+          <h1>Une adresse de goût à Ouagadougou</h1>
+          <p>
+            Une cuisine généreuse, des saveurs locales soignées et une ambiance chaleureuse pour déjeuner,
+            dîner ou partager un moment agréable chez EMLYS Restaurant.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#menu">Voir le menu</a>
+            <a class="btn btn-secondary" href="#reservation">Réserver une table</a>
+          </div>
+        </div>
+        <div class="hero-card reveal">
+          <span>Note des clients</span>
+          <strong>4.2/5</strong>
+          <p>Apprécié pour le service, le calme, le cadre et les desserts.</p>
+        </div>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="section-copy reveal">
+          <p class="eyebrow">À propos</p>
+          <h2>Des saveurs locales, un service attentif, une table qui donne envie de revenir.</h2>
+          <p>
+            EMLYS Restaurant accueille ses clients au cœur de 1200 Logements avec une expérience conviviale
+            et soignée, inspirée par la chaleur burkinabè, les bons produits et le plaisir de bien manger.
+            Chaque assiette est pensée avec attention, des classiques réconfortants aux plats à partager.
+          </p>
+          <p>
+            Pour un déjeuner, un dîner entre proches, un repas en solo ou une commande à emporter, l’équipe
+            met l’accent sur la qualité, l’accueil et des saveurs qui parlent à Ouagadougou.
+          </p>
+        </div>
+        <div class="about-grid reveal">
+          <img
+            src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=80"
+            alt="Salle de restaurant chaleureuse"
+          />
+          <div class="about-stat">
+            <strong>Chic</strong>
+            <span>repas sur place, terrasse et vente à emporter</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section menu-section" id="menu">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Notre menu</p>
+          <h2>Les grandes saveurs africaines, servies avec élégance.</h2>
+        </div>
+
+        <div class="menu-tabs reveal" role="tablist" aria-label="Catégories du menu">
+          <button class="tab active" type="button" data-category="entrees">Entrées</button>
+          <button class="tab" type="button" data-category="plats">Nos plats</button>
+          <button class="tab" type="button" data-category="fritures">Fritures</button>
+          <button class="tab" type="button" data-category="grillades">Grillades</button>
+          <button class="tab" type="button" data-category="soupes">Soupes</button>
+          <button class="tab" type="button" data-category="emlys">Plats EMLYS</button>
+          <button class="tab" type="button" data-category="boissons">Boissons</button>
+          <button class="tab" type="button" data-category="desserts">Desserts</button>
+          <button class="tab" type="button" data-category="supplements">Suppléments</button>
+        </div>
+
+        <p class="menu-helper reveal">
+          Menu officiel EMLYS 2024. Disponible du lundi au samedi, avec commandes spécifiques à appeler au
+          plus tard à 9h.
+        </p>
+        <div class="menu-grid reveal" id="menuGrid" aria-live="polite"></div>
+
+        <aside class="order-panel reveal" id="orderPanel" aria-label="Panier de commande">
+          <div class="order-panel-head">
+            <div>
+              <p class="eyebrow">Commande rapide</p>
+              <h3>Votre panier</h3>
+            </div>
+            <strong id="cartCount">0 article</strong>
+          </div>
+          <div class="cart-list" id="cartList">
+            <p class="cart-empty">Ajoutez vos plats depuis le menu pour préparer votre commande.</p>
+          </div>
+          <div class="order-total">
+            <span>Total estimé</span>
+            <strong id="cartTotal">0 F</strong>
+          </div>
+          <div class="order-form">
+            <label>
+              Nom
+              <input type="text" id="orderName" placeholder="Votre nom" />
+            </label>
+            <label>
+              Téléphone
+              <input type="tel" id="orderPhone" placeholder="+226 ..." />
+            </label>
+            <label>
+              Mode de retrait
+              <select id="orderMode">
+                <option>À emporter</option>
+                <option>Livraison à Ouaga</option>
+                <option>Repas sur place</option>
+              </select>
+            </label>
+            <label>
+              Adresse ou précision
+              <textarea id="orderNotes" rows="3" placeholder="Quartier, heure souhaitée, sauce, accompagnement..."></textarea>
+            </label>
+          </div>
+          <div class="order-actions">
+            <button class="btn btn-secondary" type="button" id="clearCart">Vider</button>
+            <a class="btn btn-primary disabled" id="sendOrder" href="#" aria-disabled="true">Commander sur WhatsApp</a>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section reviews" id="reviews">
+        <div class="review-score reveal">
+          <p class="eyebrow">Avis clients</p>
+          <strong>4.2/5</strong>
+          <span>d’après les retours clients</span>
+        </div>
+        <div class="testimonials">
+          <article class="testimonial reveal">
+            <p>"Un beau cadre pour manger tranquillement. Les plats sont savoureux et l’accueil est chaleureux."</p>
+            <span>Adama O.</span>
+          </article>
+          <article class="testimonial reveal">
+            <p>"Très bon goût local, belle présentation et vente à emporter pratique quand la journée est chargée."</p>
+            <span>Mariam K.</span>
+          </article>
+          <article class="testimonial reveal">
+            <p>"Une ambiance agréable, calme et branchée, tout en gardant la chaleur de Ouagadougou."</p>
+            <span>Serge B.</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section services" id="services">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Services</p>
+          <h2>Profitez d’EMLYS selon vos envies.</h2>
+        </div>
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <span class="service-icon">01</span>
+            <h3>Repas sur place</h3>
+            <p>Déjeuners, dîners et moments entre proches dans un cadre agréable, calme et soigné.</p>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-icon">02</span>
+            <h3>Vente à emporter</h3>
+            <p>Commandez vos plats préférés à récupérer, avec le même soin et les mêmes saveurs.</p>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-icon">03</span>
+            <h3>Terrasse</h3>
+            <p>Installez-vous en extérieur pour profiter d’une pause conviviale à 1200 Logements.</p>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-icon">04</span>
+            <h3>Traiteur</h3>
+            <p>Une option pratique pour vos repas, réunions et événements avec service adapté.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section info-section" id="infos">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Infos pratiques</p>
+          <h2>Tout ce qu’il faut savoir avant de venir.</h2>
+        </div>
+        <div class="info-grid">
+          <article class="info-card reveal">
+            <h3>Accessibilité</h3>
+            <ul>
+              <li>Entrée accessible en fauteuil roulant</li>
+              <li>Parking accessible en fauteuil roulant</li>
+              <li>Toilettes accessibles en fauteuil roulant</li>
+            </ul>
+          </article>
+          <article class="info-card reveal">
+            <h3>Offre</h3>
+            <ul>
+              <li>Alcools, bière et vin</li>
+              <li>Petites portions à partager</li>
+              <li>Restauration sur le pouce</li>
+              <li>Excellents desserts</li>
+            </ul>
+          </article>
+          <article class="info-card reveal">
+            <h3>Repas & service</h3>
+            <ul>
+              <li>Déjeuner et dîner</li>
+              <li>Places assises et service à table</li>
+              <li>Bar disponible sur place</li>
+              <li>Toilettes</li>
+            </ul>
+          </article>
+          <article class="info-card reveal">
+            <h3>Ambiance</h3>
+            <ul>
+              <li>Décontractée et branchée</li>
+              <li>Cadre agréable</li>
+              <li>Calme</li>
+              <li>Convient aux groupes et aux touristes</li>
+            </ul>
+          </article>
+          <article class="info-card reveal">
+            <h3>Populaire pour</h3>
+            <ul>
+              <li>Déjeuner</li>
+              <li>Dîner</li>
+              <li>Dîner en solo</li>
+            </ul>
+          </article>
+          <article class="info-card reveal">
+            <h3>Planning & enfants</h3>
+            <ul>
+              <li>Réservations acceptées</li>
+              <li>Convient aux enfants</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section gallery" id="gallery">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Galerie</p>
+          <h2>Moments autour de la table.</h2>
+        </div>
+        <div class="gallery-grid reveal">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Table de restaurant avec plats" />
+          <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=900&q=80" alt="Chef préparant un plat" />
+          <img src="https://images.unsplash.com/photo-1498579397066-22750a3cb424?auto=format&fit=crop&w=900&q=80" alt="Table élégante dressée" />
+          <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?auto=format&fit=crop&w=900&q=80" alt="Plantain doré et accompagnements" />
+          <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=80" alt="Ambiance intérieure de restaurant" />
+          <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=900&q=80" alt="Plat africain chaud fraîchement préparé" />
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="contact-info reveal">
+          <p class="eyebrow">Contact & localisation</p>
+          <h2>Retrouvez-nous à 1200 Logements.</h2>
+          <p>
+            EMLYS Restaurant est situé au 9G93+G47, 1200 Logements, Ouagadougou, Burkina Faso.
+          </p>
+          <p>
+            Ouvert du lundi au samedi de 9h à 17h. Contacts : (+226) 25 65 07 16,
+            70 24 66 03, 75 66 38 07, WhatsApp 07 12 19 19.
+          </p>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="https://www.google.com/maps/place/EMLYS+Restaurant/@12.3687864,-1.4997678,17z/data=!4m16!1m9!3m8!1s0xe2ebf0f39d9223d:0xd091743a9c55cd84!2sEMLYS+Restaurant!8m2!3d12.3687812!4d-1.4971929!9m1!1b1!16s%2Fg%2F11h0bwcc9f!3m5!1s0xe2ebf0f39d9223d:0xd091743a9c55cd84!8m2!3d12.3687812!4d-1.4971929!16s%2Fg%2F11h0bwcc9f?authuser=0&entry=ttu&g_ep=EgoyMDI2MDQyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer">Itinéraire</a>
+            <button class="btn btn-secondary" type="button" id="shareButton">Partager</button>
+          </div>
+          <div class="social-links" aria-label="Réseaux sociaux">
+            <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">Facebook</a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+            <a href="https://www.tiktok.com/" target="_blank" rel="noreferrer">TikTok</a>
+          </div>
+        </div>
+
+        <div class="map-card reveal">
+          <iframe
+            title="Carte vers EMLYS Restaurant"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=12.3687812,-1.4971929&z=17&output=embed"
+          ></iframe>
+        </div>
+      </section>
+
+      <section class="section forms" id="reservation">
+        <form class="form-card reveal">
+          <p class="eyebrow">Réserver une table</p>
+          <h2>Préparez votre visite.</h2>
+          <div class="form-grid">
+            <label>
+              Nom
+              <input type="text" name="name" placeholder="Votre nom" required />
+            </label>
+            <label>
+              Téléphone
+              <input type="tel" name="phone" placeholder="+226 ..." required />
+            </label>
+            <label>
+              Date
+              <input type="date" name="date" required />
+            </label>
+            <label>
+              Heure
+              <input type="time" name="time" required />
+            </label>
+            <label>
+              Personnes
+              <input type="number" name="guests" min="1" max="30" placeholder="2" required />
+            </label>
+          </div>
+          <button class="btn btn-primary" type="submit">Envoyer la réservation</button>
+        </form>
+
+        <form class="form-card contact-form reveal">
+          <p class="eyebrow">Écrivez-nous</p>
+          <h2>Une question ou une demande spéciale ?</h2>
+          <label>
+            Nom complet
+            <input type="text" name="contactName" placeholder="Votre nom" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" placeholder="Comment pouvons-nous vous aider ?" required></textarea>
+          </label>
+          <button class="btn btn-secondary" type="submit">Envoyer le message</button>
+        </form>
+      </section>
+    </main>
+
+    <a class="whatsapp" href="https://wa.me/22607121919?text=Bonjour%20EMLYS%20Restaurant%2C%20je%20souhaite%20passer%20une%20commande%20ou%20faire%20une%20r%C3%A9servation." target="_blank" rel="noreferrer" aria-label="Contacter EMLYS Restaurant sur WhatsApp">
+      WhatsApp
+    </a>
+
+    <footer class="footer">
+      <div>
+        <strong>EMLYS Restaurant</strong>
+        <p>9G93+G47, 1200 Logements, Ouagadougou, Burkina Faso</p>
+      </div>
+      <a href="#top">Retour en haut</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
