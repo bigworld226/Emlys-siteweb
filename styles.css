@@ -1,17 +1,17 @@
 :root {
-  --ink: #100d0b;
-  --charcoal: #17120f;
-  --charcoal-soft: #241b16;
-  --cream: #fff7e9;
-  --sand: #e7d0ad;
-  --gold: #d8a84b;
-  --gold-deep: #a87525;
-  --clay: #8e4f32;
-  --olive: #7da626;
-  --purple: #742983;
-  --muted: #b9aa96;
-  --line: rgba(255, 247, 233, 0.14);
-  --shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+  --ink: #f9f8f4;
+  --charcoal: #2f2140;
+  --charcoal-soft: #ffffff;
+  --cream: #ffffff;
+  --sand: #eef5e9;
+  --gold: #7e2fa0;
+  --gold-deep: #5d2076;
+  --clay: #63257d;
+  --olive: #7fb23a;
+  --purple: #7e2fa0;
+  --muted: #7f7490;
+  --line: rgba(95, 73, 128, 0.14);
+  --shadow: 0 22px 55px rgba(74, 52, 108, 0.12);
   --serif: "Playfair Display", Georgia, serif;
   --sans: "Poppins", Arial, sans-serif;
 }
@@ -26,8 +26,11 @@ html {
 
 body {
   margin: 0;
-  color: var(--cream);
-  background: var(--ink);
+  color: var(--charcoal);
+  background:
+    radial-gradient(circle at top left, rgba(127, 178, 58, 0.12), transparent 32%),
+    radial-gradient(circle at top right, rgba(126, 47, 160, 0.1), transparent 28%),
+    var(--ink);
   font-family: var(--sans);
   line-height: 1.65;
 }
@@ -59,8 +62,8 @@ textarea {
   left: 0;
   z-index: 20;
   width: 100%;
-  background: rgba(16, 13, 11, 0.7);
-  border-bottom: 1px solid rgba(216, 168, 75, 0.16);
+  background: rgba(255, 255, 255, 0.86);
+  border-bottom: 1px solid rgba(127, 178, 58, 0.18);
   backdrop-filter: blur(18px);
 }
 
@@ -77,7 +80,6 @@ textarea {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
   min-width: 0;
 }
 
@@ -88,7 +90,7 @@ textarea {
   height: 48px;
   overflow: hidden;
   background: #fff;
-  border: 1px solid rgba(216, 168, 75, 0.45);
+  border: 1px solid rgba(127, 178, 58, 0.42);
   border-radius: 6px;
 }
 
@@ -97,18 +99,11 @@ textarea {
   max-width: 90%;
 }
 
-.brand-text {
-  color: var(--gold);
-  font-family: var(--serif);
-  font-size: 1.35rem;
-  font-weight: 800;
-}
-
 .nav-links {
   display: flex;
   align-items: center;
   gap: 24px;
-  color: rgba(255, 247, 233, 0.78);
+  color: rgba(47, 33, 64, 0.82);
   font-size: 0.92rem;
   font-weight: 500;
 }
@@ -153,15 +148,15 @@ textarea {
 
 .nav-reserve,
 .btn-primary {
-  color: #17100b;
-  background: linear-gradient(135deg, #efc96d, var(--gold));
-  box-shadow: 0 14px 36px rgba(216, 168, 75, 0.22);
+  color: #fff;
+  background: linear-gradient(135deg, var(--purple), var(--olive));
+  box-shadow: 0 14px 36px rgba(126, 47, 160, 0.26);
 }
 
 .btn-secondary {
-  color: var(--cream);
-  background: rgba(255, 247, 233, 0.08);
-  border-color: rgba(255, 247, 233, 0.26);
+  color: var(--charcoal);
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(126, 47, 160, 0.18);
 }
 
 .nav-reserve:hover,
@@ -176,7 +171,7 @@ textarea {
   padding: 0;
   border: 1px solid var(--line);
   border-radius: 50%;
-  background: rgba(255, 247, 233, 0.08);
+  background: rgba(126, 47, 160, 0.08);
 }
 
 .menu-toggle span {
@@ -184,7 +179,7 @@ textarea {
   width: 18px;
   height: 2px;
   margin: 4px auto;
-  background: var(--cream);
+  background: var(--charcoal);
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
@@ -225,8 +220,8 @@ textarea {
 
 .hero-overlay {
   background:
-    linear-gradient(90deg, rgba(16, 13, 11, 0.94) 0%, rgba(16, 13, 11, 0.67) 46%, rgba(16, 13, 11, 0.32) 100%),
-    linear-gradient(180deg, rgba(16, 13, 11, 0.5), rgba(16, 13, 11, 0.78));
+    linear-gradient(90deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.58) 40%, rgba(127, 178, 58, 0.1) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.28), rgba(126, 47, 160, 0.16));
 }
 
 .hero-content {
@@ -277,7 +272,7 @@ h3 {
 
 .hero-content > p:not(.eyebrow) {
   width: min(610px, 100%);
-  color: rgba(255, 247, 233, 0.82);
+  color: rgba(47, 33, 64, 0.82);
   font-size: 1.08rem;
 }
 
@@ -296,8 +291,8 @@ h3 {
   z-index: 2;
   width: min(310px, calc(100% - 48px));
   padding: 26px;
-  background: rgba(23, 18, 15, 0.76);
-  border: 1px solid rgba(216, 168, 75, 0.28);
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(127, 178, 58, 0.24);
   border-radius: 8px;
   box-shadow: var(--shadow);
   backdrop-filter: blur(16px);
@@ -321,7 +316,7 @@ h3 {
 
 .hero-card p {
   margin: 10px 0 0;
-  color: rgba(255, 247, 233, 0.74);
+  color: rgba(47, 33, 64, 0.72);
 }
 
 .section {
@@ -341,7 +336,7 @@ h3 {
 
 .section-copy p,
 .contact-info p {
-  color: rgba(255, 247, 233, 0.74);
+  color: rgba(47, 33, 64, 0.72);
 }
 
 .about-grid {
@@ -388,24 +383,24 @@ h3 {
 .tab {
   min-height: 44px;
   padding: 0 18px;
-  color: var(--cream);
+  color: var(--charcoal);
   border: 1px solid var(--line);
   border-radius: 999px;
-  background: rgba(255, 247, 233, 0.06);
+  background: rgba(255, 255, 255, 0.92);
   cursor: pointer;
 }
 
 .tab.active,
 .tab:hover {
-  color: #17100b;
-  background: var(--gold);
-  border-color: var(--gold);
+  color: #fff;
+  background: linear-gradient(135deg, var(--purple), var(--olive));
+  border-color: transparent;
 }
 
 .menu-helper {
   width: min(760px, 100%);
   margin: -8px 0 28px;
-  color: rgba(255, 247, 233, 0.72);
+  color: rgba(47, 33, 64, 0.68);
 }
 
 .menu-grid,
@@ -422,7 +417,7 @@ h3 {
   gap: 18px;
   min-height: 210px;
   padding: 14px;
-  background: linear-gradient(145deg, rgba(255, 247, 233, 0.08), rgba(255, 247, 233, 0.035));
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(238, 245, 233, 0.88));
   border: 1px solid var(--line);
   border-radius: 8px;
   transition: transform 0.25s ease, border-color 0.25s ease;
@@ -432,7 +427,7 @@ h3 {
 .service-card:hover,
 .testimonial:hover {
   transform: translateY(-5px);
-  border-color: rgba(216, 168, 75, 0.44);
+  border-color: rgba(127, 178, 58, 0.44);
 }
 
 .menu-item.is-hidden {
@@ -455,7 +450,7 @@ h3 {
 .menu-item p,
 .service-card p,
 .testimonial p {
-  color: rgba(255, 247, 233, 0.72);
+  color: rgba(47, 33, 64, 0.72);
 }
 
 .price-list {
@@ -498,14 +493,14 @@ h3 {
 .add-to-cart {
   min-height: 48px;
   padding: 0 18px;
-  color: #17100b;
-  background: var(--gold);
+  color: #fff;
+  background: linear-gradient(135deg, var(--purple), var(--olive));
   border-radius: 999px;
   transition: transform 0.25s ease, background 0.25s ease;
 }
 
 .add-to-cart:hover {
-  background: #efc96d;
+  background: linear-gradient(135deg, #9242b5, #93c94b);
   transform: translateY(-2px);
 }
 
@@ -517,9 +512,9 @@ h3 {
   margin-top: 34px;
   padding: 28px;
   background:
-    linear-gradient(145deg, rgba(216, 168, 75, 0.12), rgba(255, 247, 233, 0.04)),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(238, 245, 233, 0.9)),
     var(--charcoal-soft);
-  border: 1px solid rgba(216, 168, 75, 0.26);
+  border: 1px solid rgba(127, 178, 58, 0.26);
   border-radius: 8px;
   box-shadow: var(--shadow);
 }
@@ -557,7 +552,7 @@ h3 {
 
 .cart-empty {
   margin: 0;
-  color: rgba(255, 247, 233, 0.68);
+  color: rgba(47, 33, 64, 0.68);
 }
 
 .cart-item {
@@ -566,7 +561,7 @@ h3 {
   gap: 14px;
   align-items: center;
   padding: 14px;
-  background: rgba(16, 13, 11, 0.42);
+  background: rgba(126, 47, 160, 0.04);
   border: 1px solid var(--line);
   border-radius: 8px;
 }
@@ -577,7 +572,7 @@ h3 {
 
 .cart-item p {
   margin: 0;
-  color: rgba(255, 247, 233, 0.68);
+  color: rgba(47, 33, 64, 0.68);
   font-size: 0.88rem;
 }
 
@@ -591,8 +586,8 @@ h3 {
 .cart-controls button {
   width: 34px;
   height: 34px;
-  color: var(--cream);
-  background: rgba(255, 247, 233, 0.1);
+  color: var(--charcoal);
+  background: rgba(126, 47, 160, 0.08);
   border: 1px solid var(--line);
   border-radius: 50%;
 }
@@ -637,7 +632,7 @@ h3 {
 .info-card,
 .form-card,
 .map-card {
-  background: linear-gradient(145deg, rgba(255, 247, 233, 0.08), rgba(255, 247, 233, 0.03));
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(238, 245, 233, 0.88));
   border: 1px solid var(--line);
   border-radius: 8px;
 }
@@ -682,8 +677,8 @@ h3 {
   max-width: none;
   padding: 96px max(16px, calc((100vw - 1180px) / 2));
   background:
-    linear-gradient(135deg, rgba(142, 79, 50, 0.18), rgba(216, 168, 75, 0.08)),
-    var(--charcoal);
+    linear-gradient(135deg, rgba(126, 47, 160, 0.07), rgba(127, 178, 58, 0.09)),
+    rgba(255, 255, 255, 0.85);
 }
 
 .info-section .section-heading,
@@ -701,7 +696,7 @@ h3 {
 
 .info-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(216, 168, 75, 0.44);
+  border-color: rgba(127, 178, 58, 0.44);
 }
 
 .info-card h3 {
@@ -713,7 +708,7 @@ h3 {
   gap: 10px;
   padding: 0;
   margin: 16px 0 0;
-  color: rgba(255, 247, 233, 0.76);
+  color: rgba(47, 33, 64, 0.76);
   list-style: none;
 }
 
@@ -777,8 +772,8 @@ h3 {
 }
 
 .social-links a {
-  color: var(--gold);
-  border-bottom: 1px solid rgba(216, 168, 75, 0.36);
+  color: var(--olive);
+  border-bottom: 1px solid rgba(127, 178, 58, 0.36);
 }
 
 .forms {
@@ -799,7 +794,7 @@ h3 {
 label {
   display: grid;
   gap: 8px;
-  color: rgba(255, 247, 233, 0.84);
+  color: rgba(47, 33, 64, 0.86);
   font-size: 0.92rem;
   font-weight: 600;
 }
@@ -808,9 +803,9 @@ input,
 select,
 textarea {
   width: 100%;
-  color: var(--cream);
-  background: rgba(16, 13, 11, 0.7);
-  border: 1px solid rgba(255, 247, 233, 0.16);
+  color: var(--charcoal);
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(95, 73, 128, 0.16);
   border-radius: 8px;
   outline: none;
   padding: 14px 15px;
@@ -820,8 +815,8 @@ textarea {
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: rgba(216, 168, 75, 0.74);
-  box-shadow: 0 0 0 4px rgba(216, 168, 75, 0.12);
+  border-color: rgba(127, 178, 58, 0.74);
+  box-shadow: 0 0 0 4px rgba(127, 178, 58, 0.12);
 }
 
 textarea {
@@ -848,7 +843,7 @@ textarea {
   min-height: 50px;
   padding: 0 18px;
   color: #fff;
-  background: #1f8f52;
+  background: linear-gradient(135deg, var(--purple), var(--olive));
   border-radius: 999px;
   box-shadow: 0 18px 46px rgba(0, 0, 0, 0.34);
   font-weight: 800;
@@ -862,13 +857,13 @@ textarea {
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
   padding: 34px 0 46px;
-  color: rgba(255, 247, 233, 0.72);
+  color: rgba(47, 33, 64, 0.72);
   border-top: 1px solid var(--line);
 }
 
 .footer strong,
 .footer a {
-  color: var(--gold);
+  color: var(--olive);
 }
 
 .footer p {
@@ -912,8 +907,8 @@ textarea {
     display: grid;
     gap: 8px;
     padding: 18px;
-    background: rgba(16, 13, 11, 0.96);
-    border: 1px solid rgba(216, 168, 75, 0.22);
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid rgba(127, 178, 58, 0.22);
     border-radius: 8px;
     box-shadow: var(--shadow);
     opacity: 0;
